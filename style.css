@@ -1,0 +1,366 @@
+:root {
+            --primary: #00ff88;
+            --bg-dark: #0f0f0f;
+            --bg-card: #1a1a1a;
+            --text-light: #f5f5f5;
+            --text-muted: #a3a3a3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-bottom: 80px;
+        }
+
+        .promo-banner {
+            background-color: var(--primary);
+            color: #000;
+            text-align: center;
+            padding: 10px;
+            font-weight: 800;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+            background-color: var(--bg-dark);
+        }
+
+        header h2 {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            color: #fff;
+            font-weight: 900;
+        }
+
+        header span {
+            color: var(--primary);
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            line-height: 1.1;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            max-width: 650px;
+        }
+
+        /* Container dyal Tsawira / 3D */
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 30px;
+            background: #111;
+            border-radius: 12px;
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+        }
+
+        /* Style dyal 3D Viewer */
+        model-viewer {
+            width: 100%;
+            height: 350px;
+            background-color: #111;
+            --poster-color: transparent;
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary);
+            color: #000;
+            padding: 5px 15px;
+            font-weight: bold;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
+        .price-section {
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--primary);
+        }
+
+        .price del {
+            color: var(--text-muted);
+            font-size: 1.3rem;
+            margin-left: 15px;
+            font-weight: normal;
+        }
+
+        /* Boutons */
+        .btn {
+            background-color: var(--primary);
+            color: #000;
+            padding: 18px 40px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+            margin-bottom: 15px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 255, 136, 0.5);
+        }
+
+        /* Upsell Box */
+        .upsell-box {
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px dashed var(--primary);
+            padding: 15px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 10px;
+        }
+
+        .upsell-box p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .btn-upsell {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            font-size: 1.1rem;
+            padding: 12px 20px;
+            box-shadow: none;
+        }
+
+        .btn-upsell:hover {
+            background-color: var(--primary);
+            color: #000;
+        }
+
+        .fomo-text {
+            color: #ff4757;
+            font-weight: bold;
+            margin-top: 5px;
+            font-size: 1rem;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 40px 0 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .feature-box {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 12px;
+            flex: 1;
+            min-width: 200px;
+            border: 1px solid #2a2a2a;
+            text-align: center;
+        }
+
+        .feature-box h3 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .feature-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 30px;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 1px solid #333;
+        }
+
+        .faq-item h4 {
+            color: #fff;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .faq-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Reviews Section (Social Proof) */
+        .reviews-section {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 40px;
+        }
+
+        .reviews-section h2 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .review-card {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            text-align: left;
+        }
+
+        .stars {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .review-card p {
+            font-size: 0.95rem;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .review-card .author {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Floating */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: #fff;
+            border-radius: 50px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.05);
+        }
+
+        .whatsapp-icon {
+            width: 24px;
+            height: 24px;
+            fill: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #050505;
+            color: #555;
+            font-size: 0.9rem;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding: 30px 15px; }
+            .hero h1 { font-size: 2.2rem; }
+            .price { font-size: 2rem; }
+            .btn { width: 100%; padding: 18px 20px; font-size: 1.1rem; }
+            .features { flex-direction: column; align-items: center; }
+            .feature-box { width: 100%; }
+        }
